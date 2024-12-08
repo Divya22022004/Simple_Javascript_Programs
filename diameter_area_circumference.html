@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Calculations</title>
+</head>
+<body>
+
+<h2>Enter Radius of the Circle</h2>
+<label for="radius">Radius:</label>
+<input type="number" id="radius" step="0.1"><br><br>
+
+<button onclick="calculateCircle()">Calculate</button>
+
+<h3>Results:</h3>
+<p id="results"></p>
+
+<script>
+    function calculateCircle() {
+        // Get the radius from the input field and convert it to a float
+        const radius = parseFloat(document.getElementById("radius").value);
+
+        // Check if the input is a valid number
+        if (isNaN(radius) || radius <= 0) {
+            document.getElementById("results").textContent = "Please enter a valid positive number for radius.";
+            return;
+        }
+
+        // Perform calculations
+        const diameter = 2 * radius;
+        const circumference = 2 * Math.PI * radius;
+        const area = Math.PI * radius * radius;
+
+        // Display the results
+        document.getElementById("results").innerHTML = `
+            Diameter: ${diameter.toFixed(2)} <br>
+            Circumference: ${circumference.toFixed(2)} <br>
+            Area: ${area.toFixed(2)}
+        `;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of N Numbers</title>
+</head>
+<body>
+
+<h2>Sum of First N Numbers</h2>
+<label for="number">Enter a number (N):</label>
+<input type="number" id="number" min="1"><br><br>
+
+<button onclick="calculateSum()">Calculate Sum</button>
+
+<h3>Result:</h3>
+<p id="result"></p>
+
+<script>
+    function calculateSum() {
+        // Get the number (n) from the input field and convert it to an integer
+        const n = parseInt(document.getElementById("number").value);
+
+        // Check if the input is a valid positive integer
+        if (isNaN(n) || n <= 0) {
+            document.getElementById("result").textContent = "Please enter a valid positive integer.";
+            return;
+        }
+
+        // Calculate the sum of the first n numbers
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+            sum += i;
+        }
+
+        // Display the result
+        document.getElementById("result").textContent = `The sum of the first ${n} numbers is ${sum}.`;
+    }
+</script>
+
+</body>
+</html>
