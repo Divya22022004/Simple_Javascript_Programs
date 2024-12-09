@@ -1,0 +1,21 @@
+<html>
+<head>	
+<script>
+function simple_interest(){
+var p,r,t,SI;
+p=Number(document.getElementById("principal").value); 
+r=Number(document.getElementById("rate").value);
+t=Number(document.getElementById("time").value);
+SI=(p*r*t)/100;
+document.getElementById("answer").value=SI;
+}
+</script>
+</head>
+<body>
+Enter the value of principal<input id="principal">
+Enter the rate of interest<input id="rate">
+Enter the time period<input id="time">
+<button onclick="simple_interest()">Simple Interest</button>
+<input id="answer">
+</body>
+</html>

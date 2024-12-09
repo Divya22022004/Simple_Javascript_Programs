@@ -1,0 +1,28 @@
+<html>
+<head>	
+<script>
+function armstrong(){
+var num,r,sum=0,temp;
+num=Number(document.getElementById("num_input").value); 
+temp=num;
+while(num!=0);
+{
+r=num%10;
+sum=sum+(r*r*r);
+num=num/10;
+}
+if(temp==sum)
+{
+alert("The number is Armstrong number.");
+}
+else
+{
+alert("The number is not a Armstrong number.");
+}}
+</script>
+</head>
+<body>
+Enter a number: <input id="num_input"><br/>
+<button onclick="armstrong()">Click me</button>
+</body>
+</html>

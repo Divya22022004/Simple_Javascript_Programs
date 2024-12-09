@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function prime_or_not(){
+var no;	
+no=Number(document.getElementById("no_input").value);
+if(no%2==0)
+{
+alert("Not a Prime Number");
+}
+else
+{	
+alert("Prime Number");
+}
+}
+</script>
+</head>
+<body>
+Enter Any Number:<input id="no_input"><br />
+<button onclick="prime_or_not()">Click me</button>
+</body>	
+</html>
